@@ -121,6 +121,18 @@ class ListViewController: UIViewController {
     }
     
     func deleteProject(name: String){
+        guard var projects = mainUser?.projects else {
+            return
+        }
+        for (index,project) in projects.enumerated() {
+            if project.name == name {
+                projects.remove(at: index)
+                mainUser?.projects = projects
+                
+                sortProjects()
+                return
+            }
+        }
         
     }
     
@@ -174,7 +186,13 @@ extension ListViewController : UITableViewDelegate {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
             self.deleteData(at: indexPath)
         }
-        let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        let archiveAction = UIContextualAction(style: .destructive, title: "Archive") {  (contextualAction, view, boolValue) in
+            self.archiveAction(at: indexPath)
+        }
+        archiveAction.backgroundColor = .orange
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [archiveAction,deleteAction])
         
         return swipeActions
     }
@@ -183,8 +201,16 @@ extension ListViewController : UITableViewDelegate {
         return true
     }
     
+    func archiveAction(at indexPath: IndexPath){
+        
+    }
+    
     func deleteData(at indexPath: IndexPath) {
-        print(indexPath.row)
+        if indexPath.section == 0 {
+            deleteProject(name: self.activeProjects[indexPath.row].name)
+        }else{
+            deleteProject(name: self.inactiveProjects[indexPath.row].name)
+        }
     }
 }
 
@@ -220,11 +246,9 @@ extension ListViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Active"
+            return self.activeProjects.count == 0 ? nil : "Active"
         }else{
-            return "Inactive"
+            return self.inactiveProjects.count == 0 ? nil : "Inactive"
         }
     }
-    
-    
 }
