@@ -11,6 +11,7 @@ import Foundation
 public struct User: Codable {
     var name: String
     var projects: [Project]?
+    //var baseCharge: Int = 500
     
     init(name: String){
         self.name = name

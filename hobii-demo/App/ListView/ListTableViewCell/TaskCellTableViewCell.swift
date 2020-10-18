@@ -38,6 +38,10 @@ class TaskCellTableViewCell: UITableViewCell {
         }else{
             self.iconImage.image = UIImage(named: "ic_play")
         }
+        
+        if project.isArchived {
+            self.iconImage.isHidden = true
+        }
     }
     
 }

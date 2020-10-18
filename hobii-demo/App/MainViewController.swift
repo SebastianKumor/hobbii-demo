@@ -65,10 +65,15 @@ extension MainViewController {
         decoder.dateDecodingStrategy = .formatted(DateFormatter.dayDateFormat)
         
         if let storedObjectives =  UserDefaults.standard.object(forKey: "savedUser") as? Data {
-            if let storedUser = try? decoder.decode(User.self, from: storedObjectives) {
-                //if let user = NSKeyedUnarchiver.unarchiveObject(with: savedPerson) as? UserModel{
+            
+            do {
+                let storedUser = try decoder.decode(User.self, from: storedObjectives) 
+                    //if let user = NSKeyedUnarchiver.unarchiveObject(with: savedPerson) as? UserModel{
                 mainUser = storedUser
+            } catch let error {
+                print("JSON error: \(error)")
             }
+           
         }
     }
 }

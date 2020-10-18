@@ -12,6 +12,9 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     
+    var activeProjects: [Project] = []
+    var inactiveProjects: [Project] = []
+    
     @IBAction func addButtonAction(_ sender: Any) {
         let alertController = UIAlertController(title: "Create new Project", message: "", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert -> Void in
@@ -36,10 +39,6 @@ class ListViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         
     }
-    
-    
-    var activeProjects: [Project] = []
-    var inactiveProjects: [Project] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,9 +94,7 @@ class ListViewController: UIViewController {
         guard let projects = mainUser?.projects else {
             return
         }
-        
-        print("projects: \(projects)")
-        
+                
         self.activeProjects = projects.filter {$0.isRunning && !$0.isArchived}
         
         self.inactiveProjects = projects.filter {!$0.isRunning && !$0.isArchived}
@@ -133,7 +130,23 @@ class ListViewController: UIViewController {
                 return
             }
         }
-        
+    }
+    
+    func archiveProject(name: String){
+        guard var projects = mainUser?.projects else {
+            return
+        }
+        for (index,project) in projects.enumerated() {
+            if project.name == name {
+                projects[index].isArchived = true
+                projects[index].isRunning = false
+                projects[index].playDate = nil
+                mainUser?.projects = projects
+                
+                sortProjects()
+                return
+            }
+        }
     }
     
     func validateProjectName(name: String) -> Bool{
@@ -202,7 +215,11 @@ extension ListViewController : UITableViewDelegate {
     }
     
     func archiveAction(at indexPath: IndexPath){
-        
+        if indexPath.section == 0 {
+            archiveProject(name: self.activeProjects[indexPath.row].name)
+        }else{
+            archiveProject(name: self.inactiveProjects[indexPath.row].name)
+        }
     }
     
     func deleteData(at indexPath: IndexPath) {
