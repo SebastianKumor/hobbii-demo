@@ -13,6 +13,12 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveUser), name: UIScene.willDeactivateNotification, object: nil)
+        
+        if UserDefaults.standard.object(forKey: "savedUser") != nil{
+            self.loadUser()
+        }
        
     }
     

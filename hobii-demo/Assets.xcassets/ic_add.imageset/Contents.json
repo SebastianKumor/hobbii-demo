@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "add-black-36dp.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

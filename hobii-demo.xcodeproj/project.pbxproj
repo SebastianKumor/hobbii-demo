@@ -18,6 +18,9 @@
 		4B81448C253C99DA00591108 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B81448A253C99DA00591108 /* LoginViewController.xib */; };
 		4B814493253CA8CD00591108 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B814492253CA8CD00591108 /* Model.swift */; };
 		4B814499253CADE400591108 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B814498253CADE400591108 /* ArchiveViewController.swift */; };
+		4B81449D253CC1DF00591108 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81449B253CC1DF00591108 /* TaskCellTableViewCell.swift */; };
+		4B81449E253CC1DF00591108 /* TaskCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B81449C253CC1DF00591108 /* TaskCellTableViewCell.xib */; };
+		4B8144A2253CCF7000591108 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8144A1253CCF7000591108 /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		4B81448A253C99DA00591108 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4B814492253CA8CD00591108 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4B814498253CADE400591108 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		4B81449B253CC1DF00591108 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
+		4B81449C253CC1DF00591108 /* TaskCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellTableViewCell.xib; sourceTree = "<group>"; };
+		4B8144A1253CCF7000591108 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 				4B81446A253C8EE800591108 /* AppDelegate.swift */,
 				4B81446C253C8EE800591108 /* SceneDelegate.swift */,
 				4B81447F253C8EFA00591108 /* App */,
+				4B8144A0253CCF5900591108 /* SupportFiles */,
 				4B814473253C8EEB00591108 /* Assets.xcassets */,
 				4B814475253C8EEB00591108 /* LaunchScreen.storyboard */,
 				4B814478253C8EEB00591108 /* Info.plist */,
@@ -110,6 +117,8 @@
 		4B81448F253CA88100591108 /* ListTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				4B81449B253CC1DF00591108 /* TaskCellTableViewCell.swift */,
+				4B81449C253CC1DF00591108 /* TaskCellTableViewCell.xib */,
 			);
 			path = ListTableViewCell;
 			sourceTree = "<group>";
@@ -128,6 +137,14 @@
 				4B814498253CADE400591108 /* ArchiveViewController.swift */,
 			);
 			path = ArchiveView;
+			sourceTree = "<group>";
+		};
+		4B8144A0253CCF5900591108 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4B8144A1253CCF7000591108 /* Extentions.swift */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B81448C253C99DA00591108 /* LoginViewController.xib in Resources */,
+				4B81449E253CC1DF00591108 /* TaskCellTableViewCell.xib in Resources */,
 				4B814477253C8EEB00591108 /* LaunchScreen.storyboard in Resources */,
 				4B814474253C8EEB00591108 /* Assets.xcassets in Resources */,
 				4B814472253C8EE800591108 /* Main.storyboard in Resources */,
@@ -205,9 +223,11 @@
 				4B81446B253C8EE800591108 /* AppDelegate.swift in Sources */,
 				4B814483253C905400591108 /* ListViewController.swift in Sources */,
 				4B814493253CA8CD00591108 /* Model.swift in Sources */,
+				4B81449D253CC1DF00591108 /* TaskCellTableViewCell.swift in Sources */,
 				4B81448B253C99DA00591108 /* LoginViewController.swift in Sources */,
 				4B81446D253C8EE800591108 /* SceneDelegate.swift in Sources */,
 				4B814499253CADE400591108 /* ArchiveViewController.swift in Sources */,
+				4B8144A2253CCF7000591108 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
