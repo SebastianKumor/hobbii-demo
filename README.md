@@ -17,10 +17,12 @@ Written in Swift using Xcode 12
     ```bash
     hobii-demo.xcodeproj
     ```
-    4. on top of xcode open hobii-demo targer and click play
-    5. you might get error that developer account not found.
-    6. log in to xcode with your apple id and select it in Signing & Capabilities in Team field
-    7. on top next to run button select iphone 11 simulator and run the app
+
+
+   4. on top of xcode open hobii-demo targer and click play
+   5. you might get error that developer account not found.
+   6. log in to xcode with your apple id and select it in Signing & Capabilities in Team field
+   7. on top next to run button select iphone 11 simulator and run the app
 
 
 
