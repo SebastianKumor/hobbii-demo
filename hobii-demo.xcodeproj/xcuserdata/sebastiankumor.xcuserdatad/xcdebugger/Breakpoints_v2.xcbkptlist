@@ -62,8 +62,8 @@
             filePath = "hobii-demo/App/ListView/ListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "validateProjectName(name:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FDD8911A-24F8-468A-83A6-205FEF46C874"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hobii-demo/App/MainViewController.swift"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "31A226EC-8C0E-4CBA-A0C9-41230C78A7E9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hobii-demo/App/MainViewController.swift"
@@ -97,6 +97,86 @@
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "loadUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52825DF1-A848-4B9D-88AE-FCD336EC0FED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hobii-demo/App/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "loadUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52825DF1-A848-4B9D-88AE-FCD336EC0FED - 7c8b0551dcd115dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hobii_demo.MainViewController.loadUser() -&gt; ()"
+                  moduleName = "hobii-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sebastiankumor/Documents/private/hobii-demo/hobii-demo/App/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1293">
+               </Location>
+               <Location
+                  uuid = "52825DF1-A848-4B9D-88AE-FCD336EC0FED - 7c8b0551dcd115dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hobii_demo.MainViewController.loadUser() -&gt; ()"
+                  moduleName = "hobii-demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sebastiankumor/Documents/private/hobii-demo/hobii-demo/App/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1462">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9EF41F3-7B9A-4546-854B-1A90581C3782"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hobii-demo/App/ListView/ListTableViewCell/TaskCellTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "populate(project:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8747F73-4AF2-4FD1-B4B2-F59954CDEA9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hobii-demo/App/Model/Model.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "canMakeInvoice()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -7,12 +7,28 @@
 
 import UIKit
 
+protocol TaskCellTableViewCellDelegate : class {
+    func createInvoiceClicked(project: Project)
+}
+
 class TaskCellTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var invoiceButton: UIButton!
+    
+    
+    var project: Project?
+    weak var delegate: TaskCellTableViewCellDelegate?
+    
+    @IBAction func invoiceButtonAction(_ sender: Any) {
+        guard let project = self.project else {
+            return
+        }
+        self.delegate?.createInvoiceClicked(project: project)
+    }
     
     
    
@@ -30,17 +46,24 @@ class TaskCellTableViewCell: UITableViewCell {
     }
     
     func populate(project: Project){
-        self.projectNameLabel.text = project.name
-        self.hoursLabel.text = "hours spent: \(project.hours):\(project.minutes)"
+        self.project = project
+        projectNameLabel.text = project.name
+        hoursLabel.text = "hours spent: \(project.hours):\(project.minutes)"
         
         if project.isRunning {
-            self.iconImage.image = UIImage(named: "ic_pause")
+            iconImage.image = UIImage(named: "ic_pause")
         }else{
-            self.iconImage.image = UIImage(named: "ic_play")
+            iconImage.image = UIImage(named: "ic_play")
         }
         
         if project.isArchived {
-            self.iconImage.isHidden = true
+            iconImage.isHidden = true
+        }
+        
+        if project.canMakeInvoice(){
+            invoiceButton.isHidden = false
+        }else{
+            invoiceButton.isHidden = true
         }
     }
     

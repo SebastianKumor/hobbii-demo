@@ -78,14 +78,12 @@ class ListViewController: UIViewController {
             mainUser?.projects?.append(project)
             sortProjects()
         }else{
-            let alertController = UIAlertController(title: "Duplicate", message: "Project with same name already exists", preferredStyle: .alert)
             
-            let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: {
-                                                (action : UIAlertAction!) -> Void in })
-            
-            alertController.addAction(cancelAction)
-            
-            self.present(alertController, animated: true, completion: nil)
+            if name.isEmpty {
+                Helpers.createSimpleAlert(in: self, title: "Empty name", message: "Project name cannot be empty")
+            }else{
+                Helpers.createSimpleAlert(in: self, title: "Duplicate", message: "Project with same name already exists")
+            }
         }
        
     }
@@ -150,6 +148,10 @@ class ListViewController: UIViewController {
     }
     
     func validateProjectName(name: String) -> Bool{
+        
+        if name.isEmpty{
+            return false
+        }
         
         guard let projects = mainUser?.projects else {
             return true
@@ -252,6 +254,7 @@ extension ListViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? TaskCellTableViewCell
         
+        cell?.delegate = self
         if indexPath.section == 0 {
             cell?.populate(project: self.activeProjects[indexPath.row])
         }else{
@@ -268,4 +271,30 @@ extension ListViewController : UITableViewDataSource {
             return self.inactiveProjects.count == 0 ? nil : "Inactive"
         }
     }
+}
+
+extension ListViewController : TaskCellTableViewCellDelegate {
+    // create pdf invoice
+    func createInvoiceClicked(project: Project) {
+        guard let projects = mainUser?.projects else {
+            return
+        }
+        
+        var updatedProject = project
+        
+        for (index,project) in projects.enumerated() {
+            if project.name == updatedProject.name && updatedProject.isRunning {
+                updatedProject.pauseDate = Date()
+                updatedProject.calculateHours()
+                updatedProject.isRunning = false
+                updatedProject.playDate = nil
+                mainUser?.projects?[index] = updatedProject
+                sortProjects()
+            }
+        }
+        
+        print("create invoice pressed with project: \(project)")
+    }
+    
+    
 }

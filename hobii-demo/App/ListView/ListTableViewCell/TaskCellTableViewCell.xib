@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="358" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-ra-R6L">
-                        <rect key="frame" x="12" y="9" width="122" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-ra-R6L">
+                        <rect key="frame" x="12" y="9" width="39.5" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,20 +35,34 @@
                             <constraint firstAttribute="height" constant="45" id="U28-ul-4M9"/>
                         </constraints>
                     </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-zq-ywf">
+                        <rect key="frame" x="208" y="18" width="80" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="Cbp-YL-cMN"/>
+                            <constraint firstAttribute="width" constant="80" id="PpX-zN-sLE"/>
+                        </constraints>
+                        <state key="normal" title="Get Invoice"/>
+                        <connections>
+                            <action selector="invoiceButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j14-f0-EXS"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="4hc-sV-yfW" secondAttribute="trailing" constant="12" id="5Y4-no-Dmz"/>
                     <constraint firstItem="4hc-sV-yfW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5ym-RX-ANi"/>
                     <constraint firstItem="IZ9-kC-GG1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="8j5-Qf-Mt9"/>
                     <constraint firstItem="zQU-ra-R6L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Ggk-wp-i92"/>
+                    <constraint firstItem="4hc-sV-yfW" firstAttribute="leading" secondItem="tfp-zq-ywf" secondAttribute="trailing" constant="13" id="cd7-Zz-d1T"/>
                     <constraint firstItem="zQU-ra-R6L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="f2P-fA-ljr"/>
                     <constraint firstAttribute="bottom" secondItem="IZ9-kC-GG1" secondAttribute="bottom" constant="16" id="fQJ-iG-h3E"/>
+                    <constraint firstItem="tfp-zq-ywf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tUu-yc-BYb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="hoursLabel" destination="IZ9-kC-GG1" id="udw-x4-LvJ"/>
                 <outlet property="iconImage" destination="4hc-sV-yfW" id="kMX-Cc-LDW"/>
+                <outlet property="invoiceButton" destination="tfp-zq-ywf" id="A4A-Oh-miR"/>
                 <outlet property="projectNameLabel" destination="zQU-ra-R6L" id="771-DF-kPg"/>
             </connections>
             <point key="canvasLocation" x="120.28985507246378" y="100.11160714285714"/>
