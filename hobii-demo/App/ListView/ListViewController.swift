@@ -194,7 +194,6 @@ extension ListViewController : UITableViewDelegate {
             updateMainUser(updatedProject: project)
             
         }
-        print("Selected")
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -276,25 +275,8 @@ extension ListViewController : UITableViewDataSource {
 extension ListViewController : TaskCellTableViewCellDelegate {
     // create pdf invoice
     func createInvoiceClicked(project: Project) {
-        guard let projects = mainUser?.projects else {
-            return
+        Helpers.createPDF(in: self, with: project) {
+            sortProjects()
         }
-        
-        var updatedProject = project
-        
-        for (index,project) in projects.enumerated() {
-            if project.name == updatedProject.name && updatedProject.isRunning {
-                updatedProject.pauseDate = Date()
-                updatedProject.calculateHours()
-                updatedProject.isRunning = false
-                updatedProject.playDate = nil
-                mainUser?.projects?[index] = updatedProject
-                sortProjects()
-            }
-        }
-        
-        print("create invoice pressed with project: \(project)")
     }
-    
-    
 }

@@ -23,6 +23,8 @@
 		4B8144A2253CCF7000591108 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8144A1253CCF7000591108 /* Extentions.swift */; };
 		4B8144AB253D74C600591108 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8144AA253D74C600591108 /* Helpers.swift */; };
 		4B8144AF253D939B00591108 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8144AE253D939B00591108 /* PDFCreator.swift */; };
+		4B8144B7253DAE8900591108 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8144B5253DAE8900591108 /* PDFPreviewViewController.swift */; };
+		4B8144B8253DAE8900591108 /* PDFPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8144B6253DAE8900591108 /* PDFPreviewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		4B8144A1253CCF7000591108 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		4B8144AA253D74C600591108 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4B8144AE253D939B00591108 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
+		4B8144B5253DAE8900591108 /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
+		4B8144B6253DAE8900591108 /* PDFPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFPreviewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			children = (
 				4B81446E253C8EE800591108 /* MainViewController.swift */,
 				4B814470253C8EE800591108 /* Main.storyboard */,
+				4B8144B4253DAE6700591108 /* PDFView */,
 				4B814488253C99B500591108 /* Login */,
 				4B814481253C903400591108 /* ListView */,
 				4B814496253CADBF00591108 /* ArchiveView */,
@@ -153,6 +158,15 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		4B8144B4253DAE6700591108 /* PDFView */ = {
+			isa = PBXGroup;
+			children = (
+				4B8144B5253DAE8900591108 /* PDFPreviewViewController.swift */,
+				4B8144B6253DAE8900591108 /* PDFPreviewViewController.xib */,
+			);
+			path = PDFView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8144B8253DAE8900591108 /* PDFPreviewViewController.xib in Resources */,
 				4B81448C253C99DA00591108 /* LoginViewController.xib in Resources */,
 				4B81449E253CC1DF00591108 /* TaskCellTableViewCell.xib in Resources */,
 				4B814477253C8EEB00591108 /* LaunchScreen.storyboard in Resources */,
@@ -233,6 +248,7 @@
 				4B81449D253CC1DF00591108 /* TaskCellTableViewCell.swift in Sources */,
 				4B81448B253C99DA00591108 /* LoginViewController.swift in Sources */,
 				4B81446D253C8EE800591108 /* SceneDelegate.swift in Sources */,
+				4B8144B7253DAE8900591108 /* PDFPreviewViewController.swift in Sources */,
 				4B8144AF253D939B00591108 /* PDFCreator.swift in Sources */,
 				4B814499253CADE400591108 /* ArchiveViewController.swift in Sources */,
 				4B8144A2253CCF7000591108 /* Extentions.swift in Sources */,

@@ -23,7 +23,7 @@ class PDFCreator: NSObject {
     func createFlyer() -> Data {
         // 1
         let pdfMetaData = [
-            kCGPDFContextCreator: "Invoice",
+            kCGPDFContextCreator: mainUser?.name ?? "app",
             kCGPDFContextAuthor: "hobbii-demo",
             kCGPDFContextTitle: title
         ]
@@ -82,7 +82,7 @@ class PDFCreator: NSObject {
     ]
     let attributedText = NSAttributedString(string: body, attributes: textAttributes)
     // 4
-    let textRect = CGRect(x: 10, y: textTop, width: pageRect.width - 20,
+    let textRect = CGRect(x: pageRect.width/4, y: textTop, width: pageRect.width/2,
                           height: pageRect.height - textTop - pageRect.height / 5.0)
     attributedText.draw(in: textRect)
   }

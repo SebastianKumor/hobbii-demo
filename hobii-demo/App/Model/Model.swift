@@ -64,8 +64,8 @@ public struct Project: Codable {
     }
     
     func calculatePrice(rate: Int) -> Double {
-        let unpaidHours = Double(self.hours + self.minutes/60)
+        let unpaidHours = Double(self.hours) + Double(self.minutes)/60
         
-        return unpaidHours*Double(rate)
+        return unpaidHours * Double(rate)
     }
 }

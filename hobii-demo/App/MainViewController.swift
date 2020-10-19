@@ -53,7 +53,6 @@ extension MainViewController {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .formatted(DateFormatter.dayDateFormat)
         if let encoded = try? encoder.encode(user) {
-       // if let data = try? NSKeyedArchiver.archivedData(withRootObject: user, requiringSecureCoding: false){
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "savedUser")
             defaults.synchronize()
