@@ -23,6 +23,7 @@ Written in Swift using Xcode 12
    5. you might get error that developer account not found.
    6. log in to xcode with your apple id and select it in Signing & Capabilities in Team field
    7. on top next to run button select iphone 11 simulator and run the app
+   8. No third party libraries were used therefore no need to install anything else
 
 
 
